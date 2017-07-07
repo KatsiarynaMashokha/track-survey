@@ -12,57 +12,61 @@ $(document).ready(function() {
     console.log("4th answer: " + answerFour);  // for debugging
     console.log("5th answer: " + answerFive);  // for debugging
 
+    var resultTrack;
 
-    if (answerOne === 'Mobile') {
-      if (answerThree === 'Client side') {
-        if (answerFour === 'iPhone') {
-          resultTrack = 'CSS/Design';
-        }
-        else if (answerFour === 'Android') {
-          resultTrack = 'Java/Android';
+    if (answerOne === 'mobile') {
+        if (answerThree === 'client') {
+          if (answerFour === 'iPhone') {
+            resultTrack = 'CSS/Design';
+          }
+          else if (answerFour === 'android') {
+            resultTrack = 'Java/Android';
+          }
+          else {
+            resultTrack = 'CSS/Design';
+          }
         }
         else {
-          resultTrack = 'CSS/Design';
+          if (answerFour === 'iPhone') {
+            resultTrack = 'Ruby/Rails';
+          }
+          else if (answerFour === 'android') {
+            resultTrack = 'Java/Android';
+          }
+          else {
+            resultTrack = 'CSS/Design';
+          }
         }
       }
       else {
-        if (answerFour === 'iPhone') {
-          resultTrack = 'Ruby/Rails';
-        }
-        else if (answerFour === 'Android') {
-          resultTrack = 'Java/Android';
-        }
-        else {
-          resultTrack = 'CSS/Design';
-        }
-      }
-    }
-    else {
-      if (answerThree === 'Server side') {
-        if (answerFour === 'iPhone') {
-          resultTrack = 'CSS/Design';
-        }
-        else if (answerFour === 'Android') {
-          resultTrack = 'Java/Android';
+        if (answerThree === 'server') {
+          if (answerFour === 'iPhone') {
+            resultTrack = 'CSS/Design';
+          }
+          else if (answerFour === 'Android') {
+            resultTrack = 'Java/Android';
+          }
+          else {
+            resultTrack = 'Ruby/Rails';
+          }
         }
         else {
-          resultTrack = 'Ruby/Rails';
+          if (answerFour === 'iPhone') {
+            resultTrack = 'CSS/Design';
+          }
+          else if (answerFour === 'android') {
+            resultTrack = 'Java/Android';
+          }
+          else {
+            resultTrack = 'Ruby/Rails';
+          }
         }
       }
-      else {
-        if (answerFour === 'iPhone') {
-          resultTrack = 'CSS/Design';
-        }
-        else if (answerFour === 'Android') {
-          resultTrack = 'Java/Android';
-        }
-        else {
-          resultTrack = 'Ruby/Rails';
-        }
-      }
-    }
+
+
+
     console.log("result: " + resultTrack);  // for debugging
-    $("#result").text(resultTrack);
+    $(".resultTrack").text(resultTrack);
     $("#result").show();
 
   });

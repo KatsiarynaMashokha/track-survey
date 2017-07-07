@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Survey</title>
+    <title>Quiz</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.2.1.js"></script>
@@ -36,12 +36,12 @@
             <p>Choose one of the following options that attracts you more:</p>
             <div class="radio">
               <label>
-                <input type="radio" name="questionThree" value="server" checked>Client side 
+                <input type="radio" name="questionThree" value="client" checked>Client side
               </label>
             </div>
             <div class="radio">
               <label>
-                <input type="radio" name="questionThree" value="client">Server side
+                <input type="radio" name="questionThree" value="server">Server side
               </label>
             </div>
           </div>
@@ -75,7 +75,7 @@
         <button type="submit" class="btn">Reveal my track!</button>
       </form>
       <div id="result">
-       <p>According to the answers you provided, <span id="resultTrack"></span> track fits you most!</p>
+        <p>According to the answers you provided, <strong><span class="resultTrack"></span></strong> track fits you most!</p>
      </div>
     </div>
   </body>
