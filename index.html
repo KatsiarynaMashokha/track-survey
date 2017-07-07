@@ -13,71 +13,70 @@
         <h2>Track suggester</h1>
         <p>Answer the following questions to found the right track for you!</p>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>Are you mainly interested in Mobile or Wed development?</p>
-          <select class="form-control" id="questionOne">
-            <option value="mobile">Mobile</option>
-            <option value="web">Web</option>
-            <option value="q1None">Neither</option>
+      <form id="quiz">
+        <div class="row">
+          <div class="col-md-6">
+            <p>Are you mainly interested in Mobile or Wed development?</p>
+            <select class="form-control" id="questionOne">
+              <option value="mobile">Mobile</option>
+              <option value="web">Web</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <p>Do you consider yourself a creative person?</p>
+            <select class="form-control" id="questionTwo">
+              <option value="q2Yes">Yes</option>
+              <option value="q2No">No</option>
+              <option value="q2Undefined">Not sure</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>Choose one of the following options that attracts you more:</p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="questionThree" value="server" checked>Client side (front end)
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="questionThree" value="client">Server side (back end)
+              </label>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <p>Choose one of the listed below platforms:</p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="questionFour" value="iPhone" checked>iPhone
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="questionFour" value="android">Android
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="questionFour" value="windows">Windows
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="formLast">
+          <p>Choose a company you would like to work for:</p>
+          <select class="form-control" id="questionFive">
+            <option value="design">Design kings</option>
+            <option value="stats">Money stats</option>
+            <option value="algorithmic">Algorithmic puzzle</option>
           </select>
         </div>
-        <div class="col-md-6">
-          <p>Do you consider yourself a creative person?</p>
-          <select class="form-control" id="questionTwo">
-            <option value="q2Yes">Yes</option>
-            <option value="q2No">No</option>
-            <option value="q2Undefined">Not sure</option>
-          </select>
-        </div>
       </div>
-      <div class="row">
-        <div class="col-md-6">
-          <p>Choose one of the following options that attracts you more:</p>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="server">Server side (back end)
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="client" checked>Client side (front end)
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="q3None">Neither
-            </label>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <p>Choose one of the listed below platform:</p>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="iPhone" checked>iPhone
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="android">Android
-            </label>
-          </div>
-          <div class="radio">
-            <label>
-              <input type="radio" name="questionThree" value="windows">Windows
-            </label>
-          </div>
-        </div>
-      </div>
-      <div class="formLast">
-        <p>Choose a company you would like to work for:</p>
-        <select class="form-control" id="questionOne">
-          <option value="design">Design kings</option>
-          <option value="stats">Money stats</option>
-          <option value="algorithmic">Algorithmic puzzle</option>
-          <option value="q5None">Nah, don't like them all</option>
-        </select>
-      </div>
-    </div>
+      <button type="submit" class="btn">Reveal my track!</button>
+      </form>
+      <div id="result">
+       <p>According to the answers you provided, <span id="resultTrack"></span> track fits you most!.</p>
+     </div>
   </body>
 </html>

@@ -1,8 +1,11 @@
 .jumbotron {
   text-align: center;
 }
-
 .formLast {
    margin: 0 auto;
    width:300px;
+}
+#result {
+  display: none;
+  text-align: center;
 }
