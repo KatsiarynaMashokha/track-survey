@@ -1,11 +1,47 @@
 .jumbotron {
   text-align: center;
+  background-color: inherit;
 }
 .formLast {
    margin: 0 auto;
    width:300px;
+   padding-top: 40px;
 }
 #result {
   display: none;
   text-align: center;
+  padding-top: 20px;
+}
+html, body {
+  background: linear-gradient(#e1eec3, #f05053);
+  margin: 0;
+  height: 100%;
+}
+p {
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+.row {
+  padding: 20px;
+}
+.form-control {
+  font-style: italic;
+  font-size: 16px;
+}
+.radio {
+  font-style: italic;
+  font-size: 16px;
+}
+.col-md-6 {
+  padding-bottom: 50px;
+}
+.btn {
+position:relative;
+left: 45%;
+right: 45%;
+margin-top: 40px;
+font-family: fantasy;
+font-weight: bolder;
+font-size: 20px;
 }

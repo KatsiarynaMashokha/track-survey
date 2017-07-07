@@ -1,63 +1,69 @@
-// Business logic
 $(document).ready(function() {
   $("form#quiz").submit(function(event) {
+    event.preventDefault();
     var answerOne = $("#questionOne").val();
     var answerTwo = $("#questionTwo").val();
     var answerThree = $("input:radio[name=questionThree]:checked").val();
     var answerFour = $("input:radio[name=questionFour]:checked").val();
     var answerFive = $("#questionFive").val();
-    var resultTrack;
-    $("#resultTrack").text(result);
-    $("#result").show();
+    console.log("1st answer: " + answerOne);  // for debugging
+    console.log("2nd answer: " + answerTwo);  // for debugging
+    console.log("3rd answer: " + answerThree);  // for debugging
+    console.log("4th answer: " + answerFour);  // for debugging
+    console.log("5th answer: " + answerFive);  // for debugging
+
 
     if (answerOne === 'Mobile') {
-      if (answerThree === 'Client side (front end)') {
+      if (answerThree === 'Client side') {
         if (answerFour === 'iPhone') {
           resultTrack = 'CSS/Design';
         }
         else if (answerFour === 'Android') {
-          resultTrack === 'Java/Android';
+          resultTrack = 'Java/Android';
         }
         else {
-          resultTrack === 'CSS/Design';
+          resultTrack = 'CSS/Design';
         }
       }
       else {
         if (answerFour === 'iPhone') {
-          resultTrack === 'Ruby/Rails';
+          resultTrack = 'Ruby/Rails';
         }
         else if (answerFour === 'Android') {
-          resultTrack === 'Java/Android';
+          resultTrack = 'Java/Android';
         }
         else {
-          resultTrack === 'CSS/Design';
+          resultTrack = 'CSS/Design';
         }
       }
     }
     else {
-      if (answerThree === 'Client side (front end)') {
+      if (answerThree === 'Server side') {
         if (answerFour === 'iPhone') {
-          resultTrack === 'CSS/Design';
+          resultTrack = 'CSS/Design';
         }
         else if (answerFour === 'Android') {
-          resultTrack === 'Java/Android';
+          resultTrack = 'Java/Android';
         }
         else {
-          resultTrack === 'Ruby/Rails';
+          resultTrack = 'Ruby/Rails';
         }
       }
       else {
         if (answerFour === 'iPhone') {
-          resultTrack === 'CSS/Design';
+          resultTrack = 'CSS/Design';
         }
         else if (answerFour === 'Android') {
-          resultTrack === 'Java/Android';
+          resultTrack = 'Java/Android';
         }
         else {
-          resultTrack === 'Ruby/Rails';
+          resultTrack = 'Ruby/Rails';
         }
       }
     }
-    event.preventDefault();
+    console.log("result: " + resultTrack);  // for debugging
+    $("#result").text(resultTrack);
+    $("#result").show();
+
   });
 });
